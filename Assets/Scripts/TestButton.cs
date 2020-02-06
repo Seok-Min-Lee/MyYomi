@@ -29,6 +29,7 @@ public class TestButton : MonoBehaviour
         DataController.Instance.currentExp += 2;
         DataController.Instance.currentHp--;
         DataController.Instance.currentCp--;
+        DataController.Instance.gold += 2000;
 
         if (DataController.Instance.currentExp >= DataController.Instance.fullExp)
         {

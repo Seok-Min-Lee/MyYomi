@@ -16,11 +16,6 @@ public class UIManager : MonoBehaviour
     public Text cpDisplayer;
     public Slider cpSlider;
 
-    /*public int level = DataController.Instance.GetLevel();
-    public int currentExp = DataController.Instance.GetExp();
-    public int fullExp = DataController.Instance.GetLevel() * 5;
-    public int currentHp = DataController.Instance.GetHp();
-    public int fullHp = DataController.Instance.GetLevel() * 10;*/
     void Start()
     {
         

@@ -116,7 +116,56 @@ public class DataController : MonoBehaviour
             PlayerPrefs.SetInt("Gold", value);
         }
     }
-    
+
+    public int healItem
+    {
+        get
+        {
+            return PlayerPrefs.GetInt("healItem");
+        }
+        set
+        {
+            PlayerPrefs.SetInt("healItem", value);
+        }
+    }
+
+    public int cleanItem
+    {
+        get
+        {
+            return PlayerPrefs.GetInt("cleanItem");
+        }
+        set
+        {
+            PlayerPrefs.SetInt("cleanItem", value);
+        }
+    }
+
+    public int expItem
+    {
+        get
+        {
+            return PlayerPrefs.GetInt("expItem");
+        }
+        set
+        {
+            PlayerPrefs.SetInt("expItem", value);
+        }
+    }
+
+    public int etcItem
+    {
+        get
+        {
+            return PlayerPrefs.GetInt("etcItem");
+        }
+        set
+        {
+            PlayerPrefs.SetInt("etcItem", value);
+        }
+    }
+
+    public List<Item> items = new List<Item>();
 
     void Awake()
     {
@@ -124,7 +173,13 @@ public class DataController : MonoBehaviour
     void Start()
     {
         StartCoroutine("AutoHeal");
+
+        items.Add(new Item("healItem", "사용즉시 hp 회복", 20000));
+        items.Add(new Item("cleanItem", "사용즉시 cp 회복", 10000));
+        items.Add(new Item("expItem", "사용즉시 exp 증가", 5000));
+        items.Add(new Item("etcItem", "아무일도 일어나지 않음", 100));
     }
+
     IEnumerator AutoHeal()
     {
         while (true)
@@ -135,5 +190,16 @@ public class DataController : MonoBehaviour
             }
             yield return new WaitForSeconds(1.0f);
         }
+    }
+
+    public void levelUp()
+    {
+        currentExp -= fullExp;
+        level++;
+
+        fullExp = (int)Mathf.Pow(expPow, level);
+        fullHp = (int)Mathf.Pow(hpPow, level);
+        currentHp = fullHp;
+        currentCp = fullCp;
     }
 }
