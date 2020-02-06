@@ -16,7 +16,7 @@ public class QuizScripts : MonoBehaviour
 
     }
 
-    public void Parse(string[] quizT, string answerT, string cat)
+    public void Parse(string[] quizT, string[] answerT, string cat)
     {
         TextAsset data = Resources.Load(cat, typeof(TextAsset)) as TextAsset;
         StringReader sr = new StringReader(data.text);
