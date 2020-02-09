@@ -58,8 +58,7 @@ public class QuizScripts : MonoBehaviour
 
 	    for (int i = 0; i<arrNum.Length; i++)
        	{
-            Random random = new Random();
-            int count = random.Next(1, 51);
+            int count = Random.Range(1, 51);
 		    for (int j = 0; j<arrNum.Length; j++)
            	{
              	if (count != arrNum[j])
