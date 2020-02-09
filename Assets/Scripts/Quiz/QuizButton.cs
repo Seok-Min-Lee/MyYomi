@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuizButton : MonoBehaviour
 {
@@ -39,5 +40,9 @@ public class QuizButton : MonoBehaviour
 
                 break;
         }
+    }
+    public void OnClickExit()
+    {
+        SceneManager.LoadScene("MainSeokMin");
     }
 }

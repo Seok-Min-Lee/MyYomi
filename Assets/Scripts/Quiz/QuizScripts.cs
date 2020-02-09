@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.IO;
 
 public class QuizScripts : MonoBehaviour
@@ -30,9 +31,9 @@ public class QuizScripts : MonoBehaviour
 
         while (source != null)
         {
-            temp = source.Split(',');
+            temp = ArrayShuffle(source.Split(','));
 
-            for(int i = 0; i < temp.Length; i++)
+            for (int i = 0; i < temp.Length; i++)
             {
                 string[] temp2 = temp[i].Split(':');
                 quiz[num] = temp2[0];
@@ -51,21 +52,31 @@ public class QuizScripts : MonoBehaviour
         }
     }
 
-    public void ArrayShuflle()
+    //배열 셔플
+    public string[] ArrayShuffle(string[] temp)
     {
         int[] arrNum = new int[50];
         string[] quizArr = new string[50];
 
-	    for (int i = 0; i<arrNum.Length; i++)
+	    for (int i = 0; i < arrNum.Length; i++)
        	{
-            int count = Random.Range(1, 51);
-		    for (int j = 0; j<arrNum.Length; j++)
+            int count = Random.Range(0, 50);
+            arrNum[i] = count;
+
+            for (int j = 0; j < i; j++)
            	{
-             	if (count != arrNum[j])
+             	if (count == arrNum[j])
               	{
-				     arrNum[i] = count;
-              	}
+                    i--;
+                    break;
+                }
             }
         }
+
+        for(int k = 0; k < quizArr.Length; k++)
+        {
+            quizArr[k] = temp[arrNum[k]];
+        }
+        return quizArr;
     }
 }

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ShopButton : MonoBehaviour
-{    
-    public void OnClick()
+public class GameButton : MonoBehaviour
+{
+    public void OnClickGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Game");
     }
 }

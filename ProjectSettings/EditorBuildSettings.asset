@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/StoreSeokMin.unity
     guid: 361a98619f5e64d49a60851427813dd8
+  - enabled: 1
+    path: Assets/Game.unity
+    guid: 8e913f44fa0185d4da039b4086b11ab9
   m_configObjects: {}
