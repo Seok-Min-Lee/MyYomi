@@ -50,4 +50,23 @@ public class QuizScripts : MonoBehaviour
             source = sr.ReadLine();    // 한줄 읽는다.
         }
     }
+
+    public void ArrayShuflle()
+    {
+        int[] arrNum = new int[50];
+        string[] quizArr = new string[50];
+
+	    for (int i = 0; i<arrNum.Length; i++)
+       	{
+            Random random = new Random();
+            int count = random.Next(1, 51);
+		    for (int j = 0; j<arrNum.Length; j++)
+           	{
+             	if (count != arrNum[j])
+              	{
+				     arrNum[i] = count;
+              	}
+            }
+        }
+    }
 }
