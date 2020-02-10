@@ -8,13 +8,16 @@ public class QuizButton : MonoBehaviour
 {
     public GameObject GamePanel;
     public GameObject StartPanel;
+    public GameObject QuizPanel;
     public Button Self;
+    public Text QuizText;
 
     public QuizScripts Qs = new QuizScripts();
 
     public void OnClick()
     {
         GamePanel.SetActive(false);
+        QuizPanel.SetActive(true);
         string[] quiz = new string[50];
         string[] answer = new string[50];
 
@@ -25,6 +28,8 @@ public class QuizButton : MonoBehaviour
                 break;
             case "역사":
                 Qs.Parse(quiz, answer, "history");
+
+                //QuizText.text = quiz[0];
 
                 break;
             case "넌센스":
