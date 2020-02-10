@@ -28,8 +28,8 @@ public class QuizButton : MonoBehaviour
                 break;
             case "역사":
                 Qs.Parse(quiz, answer, "history");
-
-                //QuizText.text = quiz[0];
+                
+                QuizText.text = quiz[0];
 
                 break;
             case "넌센스":

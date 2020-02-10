@@ -19,7 +19,7 @@ public class QuizScripts : MonoBehaviour
 
     public void Parse(string[] quizT, string[] answerT, string cat)
     {
-        TextAsset data = Resources.Load(cat, typeof(TextAsset)) as TextAsset;
+        TextAsset data = Resources.Load(m_strPath + cat, typeof(TextAsset)) as TextAsset;
         StringReader sr = new StringReader(data.text);
 
         // 먼저 한줄을 읽는다. 

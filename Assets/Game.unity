@@ -407,7 +407,7 @@ MonoBehaviour:
   StartPanel: {fileID: 1521419605}
   QuizPanel: {fileID: 783969875}
   Self: {fileID: 313904839}
-  QuizText: {fileID: 0}
+  QuizText: {fileID: 188587722}
   Qs: {fileID: 0}
 --- !u!114 &313904839
 MonoBehaviour:
@@ -870,7 +870,7 @@ MonoBehaviour:
   StartPanel: {fileID: 1521419605}
   QuizPanel: {fileID: 783969875}
   Self: {fileID: 731386604}
-  QuizText: {fileID: 0}
+  QuizText: {fileID: 188587722}
   Qs: {fileID: 0}
 --- !u!114 &731386604
 MonoBehaviour:
@@ -1488,7 +1488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1193546486
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1826,7 +1826,7 @@ MonoBehaviour:
   StartPanel: {fileID: 1521419605}
   QuizPanel: {fileID: 783969875}
   Self: {fileID: 1472831770}
-  QuizText: {fileID: 0}
+  QuizText: {fileID: 188587722}
   Qs: {fileID: 0}
 --- !u!114 &1472831770
 MonoBehaviour:
@@ -1935,7 +1935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1521419606
 RectTransform:
   m_ObjectHideFlags: 0
