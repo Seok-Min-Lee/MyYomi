@@ -10,7 +10,7 @@ public class QuizButton : MonoBehaviour
     public GameObject StartPanel;
     public Button Self;
 
-    public QuizScripts Qs;
+    public QuizScripts Qs = new QuizScripts();
 
     public void OnClick()
     {
