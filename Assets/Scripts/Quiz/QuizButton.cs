@@ -12,7 +12,7 @@ public class QuizButton : MonoBehaviour
     public Button Self;
     public Text QuizText;
 
-    public QuizScripts Qs = new QuizScripts();
+    //public QuizScripts Qs = this.gameObject.AddComponent();
 
     public void OnClick()
     {
@@ -27,21 +27,25 @@ public class QuizButton : MonoBehaviour
                 StartPanel.SetActive(true);
                 break;
             case "역사":
-                Qs.Parse(quiz, answer, "history");
+                QuizScripts.Parse(quiz, answer, "history");
+                for(int i = 0; i < 10; i++)
+                {
+                    Debug.Log(quiz[i]);
+                }
                 
                 QuizText.text = quiz[0];
 
                 break;
             case "넌센스":
-                Qs.Parse(quiz, answer, "nonsense");
+                QuizScripts.Parse(quiz, answer, "nonsense");
 
                 break;
             case "상식":
-                Qs.Parse(quiz, answer, "commonsense");
+                QuizScripts.Parse(quiz, answer, "commonsense");
 
                 break;
             case "동물":
-                Qs.Parse(quiz, answer, "animal");
+                QuizScripts.Parse(quiz, answer, "animal");
 
                 break;
         }

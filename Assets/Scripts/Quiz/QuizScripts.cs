@@ -17,16 +17,37 @@ public class QuizScripts : MonoBehaviour
 
     }
 
-    public void Parse(string[] quizT, string[] answerT, string cat)
+    static public void Parse(string[] quizT, string[] answerT, string cat)
     {
-        TextAsset data = Resources.Load(m_strPath + cat, typeof(TextAsset)) as TextAsset;
+        string[] quiz = new string[50];
+        string[] answer = new string[50];
+        string[] temp = new string[50];
+
+        string path = "Assets/Resources/" + cat + ".txt";
+        string textValue = System.IO.File.ReadAllText(path);
+
+        Debug.Log(textValue);
+
+        if (textValue != null)
+        {
+            temp = ArrayShuffle(textValue.Split(','));
+
+            for (int i = 0; i < temp.Length; i++)
+            {
+                string[] temp2 = temp[i].Split(':');
+                quiz[i] = temp2[0];
+                answer[i] = temp2[1];
+            }
+
+            quizT = quiz;
+            answerT = answer;
+        }
+/*
+        TextAsset data = Resources.Load("Assets/Resources/" + cat, typeof(TextAsset)) as TextAsset;
         StringReader sr = new StringReader(data.text);
 
         // 먼저 한줄을 읽는다. 
         string source = sr.ReadLine();
-        string[] quiz = new string[50];
-        string[] answer = new string[50];
-        string[] temp = new string[50];
         int num = 0;
 
         while (source != null)
@@ -50,10 +71,11 @@ public class QuizScripts : MonoBehaviour
             }
             source = sr.ReadLine();    // 한줄 읽는다.
         }
+*/
     }
 
     //배열 셔플
-    public string[] ArrayShuffle(string[] temp)
+    static public string[] ArrayShuffle(string[] temp)
     {
         int[] arrNum = new int[50];
         string[] quizArr = new string[50];
