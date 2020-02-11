@@ -378,17 +378,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313904836}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1535759229}
-  m_Father: {fileID: 1719385594}
+  m_Father: {fileID: 1193546486}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000061989, y: 38}
+  m_AnchoredPosition: {x: -0.700006, y: 45.700012}
   m_SizeDelta: {x: 313.2, y: 128.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &313904838
@@ -408,7 +408,6 @@ MonoBehaviour:
   QuizPanel: {fileID: 783969875}
   Self: {fileID: 313904839}
   QuizText: {fileID: 188587722}
-  Qs: {fileID: 0}
 --- !u!114 &313904839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,17 +626,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668804494}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1660688784}
-  m_Father: {fileID: 1719385594}
+  m_Father: {fileID: 1193546486}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 146.8, y: 311.7}
+  m_AnchoredPosition: {x: 146.09999, y: 319.40002}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &668804496
@@ -657,7 +656,6 @@ MonoBehaviour:
   QuizPanel: {fileID: 0}
   Self: {fileID: 668804497}
   QuizText: {fileID: 0}
-  Qs: {fileID: 0}
 --- !u!114 &668804497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,17 +839,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 731386601}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 30813732}
-  m_Father: {fileID: 1719385594}
+  m_Father: {fileID: 1193546486}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000061989, y: -256}
+  m_AnchoredPosition: {x: -0.700006, y: -248.29999}
   m_SizeDelta: {x: 313.2, y: 128.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &731386603
@@ -871,7 +869,6 @@ MonoBehaviour:
   QuizPanel: {fileID: 783969875}
   Self: {fileID: 731386604}
   QuizText: {fileID: 188587722}
-  Qs: {fileID: 0}
 --- !u!114 &731386604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1500,7 +1497,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1719385594}
+  - {fileID: 668804495}
+  - {fileID: 1312968741}
+  - {fileID: 313904837}
+  - {fileID: 1472831768}
+  - {fileID: 731386602}
   m_Father: {fileID: 519209127}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1649,17 +1650,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312968740}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 177573364}
-  m_Father: {fileID: 1719385594}
+  m_Father: {fileID: 1193546486}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000061989, y: 180.6}
+  m_AnchoredPosition: {x: -0.700006, y: 188.30008}
   m_SizeDelta: {x: 313.2, y: 128.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1312968742
@@ -1679,7 +1680,6 @@ MonoBehaviour:
   QuizPanel: {fileID: 783969875}
   Self: {fileID: 1312968743}
   QuizText: {fileID: 188587722}
-  Qs: {fileID: 0}
 --- !u!114 &1312968743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1797,17 +1797,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472831767}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1662012359}
-  m_Father: {fileID: 1719385594}
+  m_Father: {fileID: 1193546486}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000061989, y: -109}
+  m_AnchoredPosition: {x: -0.700006, y: -101.29999}
   m_SizeDelta: {x: 313.2, y: 128.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1472831769
@@ -1827,7 +1827,6 @@ MonoBehaviour:
   QuizPanel: {fileID: 783969875}
   Self: {fileID: 1472831770}
   QuizText: {fileID: 188587722}
-  Qs: {fileID: 0}
 --- !u!114 &1472831770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1935,7 +1934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1521419606
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2301,84 +2300,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662012358}
-  m_CullTransparentMesh: 0
---- !u!1 &1719385593
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1719385594}
-  - component: {fileID: 1719385596}
-  - component: {fileID: 1719385595}
-  m_Layer: 5
-  m_Name: Panel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1719385594
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719385593}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 668804495}
-  - {fileID: 1312968741}
-  - {fileID: 313904837}
-  - {fileID: 1472831768}
-  - {fileID: 731386602}
-  m_Father: {fileID: 1193546486}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.7000122, y: 7.700012}
-  m_SizeDelta: {x: -77, y: -96.6}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1719385595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719385593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1719385596
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719385593}
   m_CullTransparentMesh: 0
 --- !u!1 &1781112804
 GameObject:
@@ -2882,4 +2803,3 @@ MonoBehaviour:
   QuizPanel: {fileID: 0}
   Self: {fileID: 2108311149}
   QuizText: {fileID: 0}
-  Qs: {fileID: 0}
