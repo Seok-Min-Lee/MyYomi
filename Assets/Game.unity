@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 30813734}
   - component: {fileID: 30813733}
   m_Layer: 5
-  m_Name: Text
+  m_Name: AnimalText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 177573366}
   - component: {fileID: 177573365}
   m_Layer: 5
-  m_Name: Text
+  m_Name: HistoryText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -406,8 +406,6 @@ MonoBehaviour:
   GamePanel: {fileID: 1193546485}
   StartPanel: {fileID: 1521419605}
   QuizPanel: {fileID: 783969875}
-  Self: {fileID: 313904839}
-  QuizText: {fileID: 188587722}
 --- !u!114 &313904839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,7 +450,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 731386603}
-        m_MethodName: OnClick
+        m_MethodName: OnClickNonSense
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -653,9 +651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GamePanel: {fileID: 1193546485}
   StartPanel: {fileID: 1521419605}
-  QuizPanel: {fileID: 0}
-  Self: {fileID: 668804497}
-  QuizText: {fileID: 0}
+  QuizPanel: {fileID: 783969875}
 --- !u!114 &668804497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,8 +695,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: OnClick
+      - m_Target: {fileID: 668804496}
+        m_MethodName: OnClickBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -867,8 +863,6 @@ MonoBehaviour:
   GamePanel: {fileID: 1193546485}
   StartPanel: {fileID: 1521419605}
   QuizPanel: {fileID: 783969875}
-  Self: {fileID: 731386604}
-  QuizText: {fileID: 188587722}
 --- !u!114 &731386604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -913,7 +907,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 731386603}
-        m_MethodName: OnClick
+        m_MethodName: OnClickAnimal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1264,7 +1258,7 @@ GameObject:
   - component: {fileID: 1070525196}
   - component: {fileID: 1070525195}
   - component: {fileID: 1070525198}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1445,13 +1439,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6070887, g: 0.990566, b: 0.38781592, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: e4430d406d9e002418f1d3cf864fb0ff, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1485,7 +1479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1193546486
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1635,6 +1629,7 @@ GameObject:
   - component: {fileID: 1312968745}
   - component: {fileID: 1312968744}
   - component: {fileID: 1312968743}
+  - component: {fileID: 1312968746}
   - component: {fileID: 1312968742}
   m_Layer: 5
   m_Name: History
@@ -1678,8 +1673,6 @@ MonoBehaviour:
   GamePanel: {fileID: 1193546485}
   StartPanel: {fileID: 1521419605}
   QuizPanel: {fileID: 783969875}
-  Self: {fileID: 1312968743}
-  QuizText: {fileID: 188587722}
 --- !u!114 &1312968743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1724,7 +1717,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 731386603}
-        m_MethodName: OnClick
+        m_MethodName: OnClickHistory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1770,6 +1763,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312968740}
   m_CullTransparentMesh: 0
+--- !u!114 &1312968746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312968740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08025632bd013334a868d82716238c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1472831767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,8 +1830,6 @@ MonoBehaviour:
   GamePanel: {fileID: 1193546485}
   StartPanel: {fileID: 1521419605}
   QuizPanel: {fileID: 783969875}
-  Self: {fileID: 1472831770}
-  QuizText: {fileID: 188587722}
 --- !u!114 &1472831770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1871,7 +1874,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 731386603}
-        m_MethodName: OnClick
+        m_MethodName: OnClickCommonSense
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2005,7 +2008,7 @@ GameObject:
   - component: {fileID: 1535759231}
   - component: {fileID: 1535759230}
   m_Layer: 5
-  m_Name: Text
+  m_Name: NonsenceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2236,7 +2239,7 @@ GameObject:
   - component: {fileID: 1662012361}
   - component: {fileID: 1662012360}
   m_Layer: 5
-  m_Name: Text
+  m_Name: CommonSenceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2801,5 +2804,3 @@ MonoBehaviour:
   GamePanel: {fileID: 1193546485}
   StartPanel: {fileID: 1521419605}
   QuizPanel: {fileID: 0}
-  Self: {fileID: 2108311149}
-  QuizText: {fileID: 0}

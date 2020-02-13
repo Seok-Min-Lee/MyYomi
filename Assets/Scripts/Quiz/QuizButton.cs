@@ -9,46 +9,41 @@ public class QuizButton : MonoBehaviour
     public GameObject GamePanel;
     public GameObject StartPanel;
     public GameObject QuizPanel;
-    public Button Self;
-    public Text QuizText;
+    Dictionary<string, string> quiz;
 
-    //public QuizScripts Qs = this.gameObject.AddComponent();
-
-    public void OnClick()
+    public void OnClickBack()
     {
-        GamePanel.SetActive(false);
-        QuizPanel.SetActive(true);
-        string[] quiz = new string[50];
-        string[] answer = new string[50];
+        GameObject.Find("Canvas").transform.GetChild(0).gameObject.SetActive(true); //gamepanel
+        GameObject.Find("Canvas").transform.GetChild(1).gameObject.SetActive(false); //startpanel
+        GameObject.Find("Canvas").transform.GetChild(2).gameObject.SetActive(false); //quizpanel
+    }
+    public void OnClickHistory()
+    {
+        GameObject.Find("Canvas").transform.GetChild(0).gameObject.SetActive(false); //gamepanel
+        GameObject.Find("Canvas").transform.GetChild(2).gameObject.SetActive(true); //quizpanel
 
-        switch (Self.GetComponentsInChildren<Text>()[0].text)
-        {
-            case "X":
-                StartPanel.SetActive(true);
-                break;
-            case "역사":
-                QuizScripts.Parse(quiz, answer, "history");
-                for(int i = 0; i < 10; i++)
-                {
-                    Debug.Log(quiz[i]);
-                }
-                
-                QuizText.text = quiz[0];
+        quiz = QuizScripts.Parse(quiz, "history");
+    }
+    public void OnClickNonSense()
+    {
+        GameObject.Find("Canvas").transform.GetChild(0).gameObject.SetActive(false); //gamepanel
+        GameObject.Find("Canvas").transform.GetChild(2).gameObject.SetActive(true); //quizpanel
 
-                break;
-            case "넌센스":
-                QuizScripts.Parse(quiz, answer, "nonsense");
+        quiz = QuizScripts.Parse(quiz, "nonsense");
+    }
+    public void OnClickCommonSense()
+    {
+        GameObject.Find("Canvas").transform.GetChild(0).gameObject.SetActive(false); //gamepanel
+        GameObject.Find("Canvas").transform.GetChild(2).gameObject.SetActive(true); //quizpanel
 
-                break;
-            case "상식":
-                QuizScripts.Parse(quiz, answer, "commonsense");
+        quiz = QuizScripts.Parse(quiz, "commonsence");
+    }
+    public void OnClickAnimal()
+    {
+        GameObject.Find("Canvas").transform.GetChild(0).gameObject.SetActive(false); //gamepanel
+        GameObject.Find("Canvas").transform.GetChild(2).gameObject.SetActive(true); //quizpanel
 
-                break;
-            case "동물":
-                QuizScripts.Parse(quiz, answer, "animal");
-
-                break;
-        }
+        quiz = QuizScripts.Parse(quiz, "animal");
     }
     public void OnClickExit()
     {

@@ -14,75 +14,38 @@ public class QuizScripts : MonoBehaviour
         StreamWriter writer = new StreamWriter(f, System.Text.Encoding.Unicode);
         writer.WriteLine(strData);
         writer.Close();
-
     }
 
-    static public void Parse(string[] quizT, string[] answerT, string cat)
+    static public Dictionary<string, string> Parse(Dictionary<string, string> quiz, string cat)
     {
-        string[] quiz = new string[50];
-        string[] answer = new string[50];
-        string[] temp = new string[50];
-
-        string path = "Assets/Resources/" + cat + ".txt";
-        string textValue = System.IO.File.ReadAllText(path);
-
-        Debug.Log(textValue);
-
-        if (textValue != null)
-        {
-            temp = ArrayShuffle(textValue.Split(','));
-
-            for (int i = 0; i < temp.Length; i++)
-            {
-                string[] temp2 = temp[i].Split(':');
-                quiz[i] = temp2[0];
-                answer[i] = temp2[1];
-            }
-
-            quizT = quiz;
-            answerT = answer;
-        }
-/*
-        TextAsset data = Resources.Load("Assets/Resources/" + cat, typeof(TextAsset)) as TextAsset;
-        StringReader sr = new StringReader(data.text);
-
-        // 먼저 한줄을 읽는다. 
-        string source = sr.ReadLine();
+        TextAsset data = Resources.Load(cat, typeof(TextAsset)) as TextAsset;
+        string wholeString = data.text + "";
         int num = 0;
 
-        while (source != null)
+        string[] set = wholeString.Split(',');
+        set = ArrayShuffle(set);
+
+        //Debug.Log(wholeString);
+
+        for (int i = 0; i < set.Length; i++)
         {
-            temp = ArrayShuffle(source.Split(','));
-
-            for (int i = 0; i < temp.Length; i++)
-            {
-                string[] temp2 = temp[i].Split(':');
-                quiz[num] = temp2[0];
-                answer[num] = temp2[1];
-                num++;
-            }
-
-            if (temp.Length == 0)
-            {
-                sr.Close();
-                quizT = quiz;
-                answerT = answer;
-                return;
-            }
-            source = sr.ReadLine();    // 한줄 읽는다.
+            string[] temp2 = set[i].Split(':');
+            quiz.Add(temp2[0], temp2[1]);
+            num++;
         }
-*/
+
+        return quiz;
     }
 
     //배열 셔플
     static public string[] ArrayShuffle(string[] temp)
     {
-        int[] arrNum = new int[50];
-        string[] quizArr = new string[50];
+        int[] arrNum = new int[temp.Length];
+        string[] quizArr = new string[temp.Length];
 
 	    for (int i = 0; i < arrNum.Length; i++)
        	{
-            int count = Random.Range(0, 50);
+            int count = Random.Range(0, temp.Length);
             arrNum[i] = count;
 
             for (int j = 0; j < i; j++)
