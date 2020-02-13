@@ -202,4 +202,24 @@ public class DataController : MonoBehaviour
         currentHp = fullHp;
         currentCp = fullCp;
     }
+
+    public Animator animator;
+    public GameObject default1;
+
+    public void ImageChange()
+    {
+        animator = GetComponent<Animator>();
+
+        if (currentHp < currentHp / 1.5 / 1.5 && currentCp < 7)
+        {
+            default1.setActive(false);
+            animator.SetBool("default", true);
+        }
+
+        if (currentCp < 4)
+        {
+            animator.SetBool("dirty", true);
+        }
+    }
+
 }
