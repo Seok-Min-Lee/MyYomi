@@ -188,6 +188,9 @@ public class DataController : MonoBehaviour
             {
                 currentHp++;
             }
+
+            ImageChange();
+
             yield return new WaitForSeconds(1.0f);
         }
     }
@@ -205,24 +208,28 @@ public class DataController : MonoBehaviour
 
     public Animator animator;
     public GameObject default1;
-    public GameObject drity;
+    public GameObject dirty;
+    public GameObject nonehp;
 
     public void ImageChange()
     {
-        animator = GetComponent<Animator>();
+        /*animator = GetComponent<Animator>();*/
 
-        if (currentHp < currentHp / 1.5 / 1.5 && currentCp < 7)
+        if (currentHp >= fullHp / 1.5  && currentCp >= 7)
         {
-            default1.SetActive(true);
-            drity.SetActive(false);
-            /*animator.SetBool("default", true);*/
+            AnimationController.changeAnimation(0);
+            /*animator.SetBool("default1", true);*/
         }
 
-        if (currentCp < 4)
+        if (currentCp <= 4)
         {
-            drity.SetActive(true);
-            default1.SetActive(false);
+            AnimationController.changeAnimation(1);
             /*animator.SetBool("dirty", true);*/
+        }
+
+        if(currentHp <= fullHp / 2.5)
+        {
+            AnimationController.changeAnimation(2);
         }
     }
 
